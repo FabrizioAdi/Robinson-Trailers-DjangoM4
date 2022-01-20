@@ -1,1 +1,1 @@
-web: gunicorn robinson.wsgi
+web: gunicorn Robinson.wsgi
