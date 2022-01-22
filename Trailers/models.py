@@ -16,6 +16,19 @@ class Sector(models.Model):
         verbose_name = "Sector"
         verbose_name_plural = "Sectors"
 
+# Category model
+
+class Category(models.Model):
+
+    def __str__(self):
+        return self.title
+
+    title = models.CharField(max_length=60)
+
+    class Meta:
+        verbose_name = "Category"
+        verbose_name_plural = "Categorys"
+
 # Trailers model.
 
 class Trailers(models.Model):
@@ -23,6 +36,7 @@ class Trailers(models.Model):
     def __str__(self):
         return self.title
 
+    category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.CASCADE)
     sector = models.ForeignKey(Sector, on_delete=models.CASCADE, null=True)
     title = models.CharField(max_length=100, unique=True)
     excerpt = models.TextField(blank=True)
