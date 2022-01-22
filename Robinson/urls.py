@@ -18,8 +18,11 @@ from django.urls import path
 from Trailers.views import *
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('',index, name ='index'),
-    path('category/<id>/', category, name='category'),
+        path('admin/', admin.site.urls),
+        path('', index, name ='index'),
+        path('category/<id>/', category, name='category'),
+        path('trailer/<id>/', trailer, name='trailer'),
+    
+    ]
 
-]
+
