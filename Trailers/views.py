@@ -3,18 +3,18 @@ from django.http import HttpResponse
 from .models import Trailers, Category
 
 def index (request):
-    question = Trailers.objects.all()
-    return HttpResponse(question)
+    categories = Category.objects.all()
+    data = {'categories' : categories}
+    return render(request, 'index.html', data)
 
 def category (request, id):
     category_user = Category.objects.get(pk=id)
     return HttpResponse(category_user)
-
+   
 def trailer (request, id):
     trailer_user = Trailers.objects.get(pk=id)
-    full = "<h1>" + str(trailer_user) + "</h1>" + \
-           "<p>" + str(trailer_user.excerpt) + "</p>" + \
-           "<p>" + str(trailer_user.price) + "</p>"
+    data = {'trailer_user' : trailer_user }
+    return render(request, 'trailer.html', data)
 
     return HttpResponse(full)
 

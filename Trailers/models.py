@@ -7,9 +7,9 @@ from django.db import models
 class Sector(models.Model):
 
     def __str__(self):
-        return self.title
+        return self.name
 
-    title = models.CharField(max_length=60)
+    name = models.CharField(max_length=60)
     excerpt = models.TextField(blank=True)
 
     class Meta:
@@ -21,24 +21,24 @@ class Sector(models.Model):
 class Category(models.Model):
 
     def __str__(self):
-        return self.title
+        return self.name
 
-    title = models.CharField(max_length=60)
+    name = models.CharField(max_length=60)
 
     class Meta:
         verbose_name = "Category"
-        verbose_name_plural = "Categorys"
+        verbose_name_plural = "Categories"
 
 # Trailers model.
 
 class Trailers(models.Model):
 
     def __str__(self):
-        return self.title
+        return self.name
 
     category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.CASCADE)
     sector = models.ForeignKey(Sector, on_delete=models.CASCADE, null=True)
-    title = models.CharField(max_length=100, unique=True)
+    name = models.CharField(max_length=100, unique=True)
     excerpt = models.TextField(blank=True)
     price = models.DecimalField(max_digits=12, decimal_places=2)
 
