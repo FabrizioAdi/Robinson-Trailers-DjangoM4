@@ -7,12 +7,14 @@
     <title>Trailer</title>
 </head>
 <body>
-    
-    {% trailer_user %}
-    <h1></h1>
+    {% if trailer_user %}
+        <h1> {{ trailer_user.name }} </h1>
+        <p> {{ trailer_user.sector }} </p>
+        <p> {{ trailer_user.excerpt }} </p>
+        <p> {{ trailer_user.price }} </p>
 
     {% else %}
-
+    <p>There is no product with this id.</p>
     {% endif %}
 </body>
 </html>
