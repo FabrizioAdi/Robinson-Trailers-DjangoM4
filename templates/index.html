@@ -6,21 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <h1>Hello</h1>
 
-    <h3>Nice to se you</h3>
+    <main>
 
-    {% for cat in categories %}
+        <section class="trailers">
 
-    <p><a href = "category/{{ cat.id }}"> {{ cat.name }}</a> 
-    </p>
-    {% endfor %}
+            <div class="container">
+                <header>
+                    <h1>Logo   Search</h1>
+                    <h3>Good to see you !!!</h3>
+                    {% for cat in categories %}
+                    <p><a href = "category/{{ cat.id }}"> {{ cat.name }}</a> </p>
+                    {% endfor %}
+                </header>
+
+                <div class="row">
+                    <div class="col-sm-6 col-md-5 offset-md-1">
+                        <figure>
+                            <a href="#"><img src="img/..." alt="Block Crane Trailer"></a>
+                            <figcaption>Block Crane Trailer</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
 
 <!-- {{ categories }} -->
-
-
-    
+ 
 </body>
 </html>
 
