@@ -9,11 +9,19 @@ def index (request):
 
 def category (request, id):
     category_user = Category.objects.get(pk=id)
-    return HttpResponse(category_user)
+    category_trailer = Trailers.objects.filter(category = category_user)
+    categories = Category.objects.all()
+    data = {'category_user' : category_user,
+            'category_trailer' : category_trailer,
+            'categories' : categories
+    }
+
+    return render(request, 'category_trailer.html', data)
    
 def trailer (request, id):
     trailer_user = Trailers.objects.get(pk=id)
-    data = {'trailer_user' : trailer_user }
+    categories = Category.objects.all()
+    data = {'trailer_user' : trailer_user, 'categories' : categories }
     return render(request, 'trailer.html', data)
 
     return HttpResponse(full)

@@ -4,23 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trailer</title>
+    <title>Document</title>
 </head>
 <body>
+
     {% extends 'index.html' %}
 
     {% block trailer %}
 
-    {% if trailer_user %}
-        <h1> {{ trailer_user.name }} </h1>
-        <p> {{ trailer_user.sector }} </p>
-        <p> {{ trailer_user.excerpt }} </p>
-        <p> {{ trailer_user.price }} </p>
+    {% if category_trailer %}
+
+        {% for trailer in category_trailer %}
+            <p><a href = "/trailer/{{ trailer.id }}/"> {{ trailer.name }} </a></p>
+        {% endfor %}
 
     {% else %}
-    <p>There is no product with this id.</p>
+
     {% endif %}
-    {% endblock trailer %}
+
+
+    {% endblock %}
+    
 
 </body>
 </html>

@@ -10,42 +10,26 @@
 	<meta name="keywords" content="trailers, cranes, forestry, construction, trailersforsale">
 	<meta name="author" content="Adrian">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="main.css">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
-
-    <!--[if lt IE 9]>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-	<![endif]-->
 </head>
 
 <body>
-
-    <main>
-
-        <section class="trailers">
-
-            <div class="container">
-                <header>
-                    <h1>Logo   Search</h1>
-                    <h3>Good to see you !!!</h3>
-                    {% for cat in categories %}
-                    <p><a href = "category/{{ cat.id }}"> {{ cat.name }}</a> </p>
-                    {% endfor %}
-                </header>
-
-                <div class="row">
-                    <div class="col-sm-6 col-md-5 offset-md-1">
-                        <figure>
-                            <a href="#"><img src="img/..." alt="Block Crane Trailer"></a>
-                            <figcaption>Block Crane Trailer</figcaption>
-                        </figure>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+    <div>
+        <h1>Logo   Search</h1>
+    </div>
     
+    <div style="clear:both"></div>
+    <div style="width:200px; float:left">
+        <h3>Good to see you !!!</h3>
+        {% for cat in categories %}
+        <p><a href = "/category/{{ cat.id }}"> {{ cat.name }}</a> </p>
+        {% endfor %}
+    </div>
+    
+    <div style="width:700; float:left">
+        {% block trailer %} {% endblock trailer %}
+    </div>
+    
+    <div style="clear:both"></div>
 
 <!-- {{ categories }} -->
  
