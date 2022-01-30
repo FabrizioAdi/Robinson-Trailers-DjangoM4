@@ -1,6 +1,4 @@
-{% extends 'index.html' %}
 
-{% block trailer %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +8,8 @@
     <title>Trailer</title>
 </head>
 <body>
+    {% extends 'index.html' %}
+    {% block trailer %}
 
     {% if trailer_user %}
         <h1> {{ trailer_user.name }} </h1>
@@ -20,7 +20,9 @@
     {% else %}
     <p>There is no product with this id.</p>
     {% endif %}
+
     {% endblock trailer %}
+   
 
 </body>
 </html>
