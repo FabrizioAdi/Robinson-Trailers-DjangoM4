@@ -1,0 +1,43 @@
+body {
+    background-color:black;
+    color:blanchedalmond;
+    font-size: 17px;
+}
+}
+.navbar-nav li:hover>.dropdown-menu
+{
+	display: block;
+}
+*/
+
+.navbar
+{
+	min-height: 57px;
+}
+
+.bg-trailers
+{
+	background-color: #91a33b !important;
+}
+
+.list-group-item-dark
+{
+	background-color: #373a3d;
+	color: white;
+}
+
+.list-group-item-dark:hover
+{
+	background-color: #91a33b !important;
+}
+
+.list-group .active
+{
+	background-color: #91a33b !important;
+	cursor: default;
+}
+
+.blockquote
+{
+	line-height: 120%;
+}

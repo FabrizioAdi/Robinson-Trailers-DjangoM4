@@ -1,4 +1,4 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +22,9 @@
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
     </script>
 
-<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+
 
 
 </head>
@@ -30,8 +32,9 @@
 <body>
 <!--Navigation-->
 <header>
+    <h1 class="ad">Check</h1>
     <nav class="navbar navbar-dark bg-trailers navbar-expand-lg">
-        <a class="navbar-brand" href="#"><img src="img/logo.png" width="30" height="30" class="d-inline-block mr-1 align-bottom" alt="">Robinson Trailers and Cranes</a>
+        <a class="navbar-brand" href="#"><img src="https://res.cloudinary.com/fabrizioadi/image/upload/v1643668128/Changed_Logo_orginal_fkagtl.jpg" width="300" height="40" class="d-inline-block mr-1 align-bottom" alt="Logo">Robinson Trailers and Cranes</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="Navigation switch">
             <span class="navbar-toggler-icon"></span>
 
@@ -43,15 +46,44 @@
                     <a class="nav-link" href="#">Start</a>
                 </li> 
 
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false" id="submenu" aria-haspopup="true"> Home </a>
+                    <div class="dropdown-menu" aria-labelledby="submenu">
+                        <a class="dropdown-item" href="#">Home1</a>
+                        <a class="dropdown-item" href="#">Home2</a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <a class="dropdown-item" href="#">Home3</a>
+                        <a class="dropdown-item" href="#">Home4</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> History </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> Photos </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> Category </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> Contact us </a>
+                </li>
             </ul>
+
+            <form class="form-inline">
+				
+                <input class="form-control mr-1" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-light" type="submit">Click</button>
+            
+            </form>
         </div>
     </nav>
-    
-    
     <!--<div>
         <h1 class="logo">Logo   Search</h1>
     </div>-->
-
 </header> 
     
     <div style="clear:both" class="tut"></div>
