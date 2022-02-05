@@ -30,7 +30,7 @@
 <!--Navigation-->
 <header>
     <nav class="navbar navbar-dark bg-trailers navbar-expand-lg">
-        <a class="navbar-brand" href="#"><img src="https://res.cloudinary.com/fabrizioadi/image/upload/v1643668128/Changed_Logo_orginal_fkagtl.jpg" width="300" height="40" class="d-inline-block mr-1 align-bottom" alt="Logo">Robinson Trailers and Cranes</a>
+        <a class="navbar-brand" href="#"><img src="https://res.cloudinary.com/fabrizioadi/image/upload/v1643668128/Changed_Logo_orginal_fkagtl.jpg" width="300" height="40" class="d-inline-block mr-1 align-bottom" alt="Logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="Navigation switch">
             <span class="navbar-toggler-icon"></span>
 
@@ -45,27 +45,27 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false" id="submenu" aria-haspopup="true"> Home </a>
                     <div class="dropdown-menu" aria-labelledby="submenu">
-                        <a class="dropdown-item" href="#">Home1</a>
-                        <a class="dropdown-item" href="#">Home2</a>
+                        <a class="dropdown-item" href="#">Section1</a>
+                        <a class="dropdown-item" href="#">Section2</a>
 
                         <div class="dropdown-divider"></div>
 
-                        <a class="dropdown-item" href="#">Home3</a>
-                        <a class="dropdown-item" href="#">Home4</a>
+                        <a class="dropdown-item" href="#">Section3</a>
+                        <a class="dropdown-item" href="#">Section4</a>
                     </div>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> History </a>
+                    <a class="nav-link" href="#">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> Photos </a>
+                    <a class="nav-link" href="#">Write</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> Category </a>
+                    <a class="nav-link" href="#">Logout</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> Contact us </a>
+                    <a class="nav-link" href="#">Contact us </a>
                 </li>
             </ul>
 
@@ -84,7 +84,7 @@
     
     <div style="clear:both" class="tut"></div>
     <div style="width:200px; float:left">
-        <h3 class="check">Good to see you !!!</h3>
+        <h3 class="check">Select categories</h3>
         {% for cat in categories %}
         <p><a href = "/category/{{ cat.id }}"> {{ cat.name }}</a> </p>
         {% endfor %}
@@ -97,6 +97,20 @@
     <div style="clear:both"></div>
 
 <!-- {{ categories }} -->
+ 
+ <footer>
+    <footer class="footer mt-auto py-3 dark-bg">
+       
+        <p class="m-0 text-center text-white">Follow us: 
+            <a href="https://www.facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-square ms-3"></i></a>
+            <a href="https://twitter.com/" target="_blank" rel="noopener"><i class="fab fa-twitter-square ms-3"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener"><i class="fab fa-instagram-square ms-3"></i></a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube-square ms-3"></i></a>
+            </p>
+            <p class="m=0 text-center text-white">copyright &copy;2021 CI. designed by<span>FabrizioAdi</span></p>
+
+    </footer>
+
  
 </body>
 </html>

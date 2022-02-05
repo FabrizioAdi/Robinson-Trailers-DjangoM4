@@ -3,13 +3,13 @@ body {
     color:blanchedalmond;
     font-size: 17px;
 }
-}
+/** Navigation bar **/
+
 .navbar-nav li:hover>.dropdown-menu
 {
 	display: block;
 }
 */
-
 .navbar
 {
 	min-height: 57px;
@@ -17,7 +17,7 @@ body {
 
 .bg-trailers
 {
-	background-color: #91a33b !important;
+	background-color: rgb(87, 85, 85) !important;
 }
 
 .list-group-item-dark
@@ -41,3 +41,5 @@ body {
 {
 	line-height: 120%;
 }
+
+/** Footer **/
